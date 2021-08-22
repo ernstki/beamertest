@@ -1,0 +1,10 @@
+variables:
+  aspectratio: 169
+  theme: Copenhagen
+  # try 'horizontal' for the full set
+  navigation: frame
+
+# default is 2; uncomment this to get subsection titles
+#slide-level: 4
+
+
