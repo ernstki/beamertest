@@ -15,7 +15,8 @@ Beamer. You might find the [`Makefile`](beamertest/Makefile) useful.
 Make sure you have:
 
 * a `python3` in your search path
-* [mwclient][]==0.10.*; `pip install --user mwclient` is fine
+* [mwclient][] == 0.10.*
+    * `pip install --user mwclient` is probably fine
 
 Put it in your `$PATH`:
 
