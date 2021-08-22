@@ -12,7 +12,7 @@ import os
 import logging
 from datetime import datetime as dt
 
-HOMEPAGE = 'https://github.com/ernstki/beamertest'
+HOMEPAGE = 'https://github.com/ernstki/mw2beamer'
 DEFAULT_USER = os.getenv('USER')
 DEFAULT_SITE = os.getenv('MW2BEAMER_SITE', 'your.site.local')
 # added to slides (first slide, titles) and PDF metadata
