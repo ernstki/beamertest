@@ -50,7 +50,7 @@ optional arguments:
                         silence all non-error output
   -u USER, --user USER  the username to authenticate as (default: $USER)
   -s SITE, --site SITE  the hostname to connect to (default: $MW2BEAMER_SITE,
-                        else tfwiki.cchmc.org)
+                        else your.site.local)
   -a AUTHOR, --author AUTHOR
                         the author's name (default: $MW2BEAMER_AUTHOR, else
                         fetched from MediaWiki API)
