@@ -1,0 +1,7 @@
+# see https://github.com/github/linguist/blob/master/docs/overrides.md
+# and https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+
+# I'm doing this here because with the extension .wiki the file gets rendered
+# to an HTML representation on GitHub (just like READMEs are), and I don't
+# actually want that
+*.wiki_ linguist-language=mediawiki
