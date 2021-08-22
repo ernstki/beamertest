@@ -6,5 +6,3 @@ variables:
 
 # makes subsection titles show up; default is "discover" from doc structure
 slide-level: 4
-
-
