@@ -9,3 +9,6 @@
 *.snm
 *.synctex.gz
 *.toc
+
+# whatever else
+mermaid-filter.err

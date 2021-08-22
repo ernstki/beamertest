@@ -85,6 +85,19 @@
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \newif\ifbibliography
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -190,6 +203,29 @@ content before the pause
 \hypertarget{section-three-title}{%
 \section{Section Three Title}\label{section-three-title}}
 
+\hypertarget{mermaid-diagram}{%
+\subsection{Mermaid diagram}\label{mermaid-diagram}}
+
+\begin{frame}[fragile]{Mermaid diagram}
+inline, with a \texttt{data:} URI; shows up in the Beamer slides, but
+weirdly not in the Markdown README (?!)
+\end{frame}
+
+\hypertarget{mermaid-diagram-pdf-version}{%
+\subsection{Mermaid diagram (PDF
+version)}\label{mermaid-diagram-pdf-version}}
+
+\begin{frame}[fragile]{Mermaid diagram (PDF version)}
+\texttt{.mermaid\ format=svg} hidden from slides in a ``notes'' section,
+but shows up in README.
+
+\note{\includegraphics{img/mermaid.svg}}
+
+\centerline{\includegraphics[width=3in]{img/mermaid.pdf}}
+
+Hat tip to Jeromy Anglim\footnote<.->{https://jeromyanglim.blogspot.com/2012/07/beamer-pandoc-markdown.html}
+\end{frame}
+
 \hypertarget{a-plain-slide-bottom-aligned}{%
 \subsection{A plain slide,
 bottom-aligned}\label{a-plain-slide-bottom-aligned}}
@@ -203,6 +239,56 @@ Just a plain old slide.\footnote<.->{Do footnotes work?}
 
 \begin{frame}{Conclusion}
 QED.
+\end{frame}
+
+\hypertarget{references-see-also}{%
+\subsection{References / See Also}\label{references-see-also}}
+
+\begin{frame}[fragile]{References / See Also}
+\begin{itemize}
+\tightlist
+\item
+  \url{https://garrettgman.github.io/rmarkdown/authoring_pandoc_markdown.html}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://garrettgman.github.io/rmarkdown/authoring_pandoc_markdown.html\#incremental_lists}{incremental
+    lists}
+  \item
+    \href{https://garrettgman.github.io/rmarkdown/authoring_pandoc_markdown.html\#structuring_the_slide_show}{structuring
+    the slide show}
+  \end{itemize}
+\item
+  \url{https://github.com/jgm/pandoc/issues/5031}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    basically,
+    \texttt{\textbackslash{}framesubtitle\{The\ frame\textquotesingle{}s\ subtitle\}}
+    is the only way
+  \end{itemize}
+\item
+  \href{http://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}{beameruserguide.pdf}
+\item
+  \url{https://deic-web.uab.cat/~iblanes/beamer_gallery/}
+\item
+  \href{https://github.com/raghur/mermaid-filter}{mermaid-filter}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://tex.stackexchange.com/a/2107}{How to include SVG
+    diagrams in LaTeX?}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      I just ended up using librsvg's \texttt{svg2pdf} in the Makefile
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
 \end{frame}
 
 \end{document}
