@@ -66,7 +66,7 @@ Homepage: https://github.com/ernstki/mw2beamer
 
 ## Author
 
-Kevin Ernst ((ernstki -at- mail.uc.edu)[mailto:ernstki%20-at-%20mail.uc.edu])
+Kevin Ernst ([ernstki -at- mail.uc.edu](mailto:ernstki%20-at-%20mail.uc.edu))
 
 ## License
 
