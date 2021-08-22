@@ -4,10 +4,23 @@ Convert an arbitrary article on your MediaWiki wiki to [Beamer][] slides using
 [Pandoc][] (Pandoc, which is awesome by the way).
 
 Prompts for credentials for a local site protected with HTTP Basic
-authentication (but does not cache these anywhere).
+authentication, but does not cache or save these anywhere.
 
 See [`beamertest`](beamertest) for some experiments with Markdown, Pandoc, and
-Beamer.
+Beamer. You might find the [`Makefile`](beamertest/Makefile) useful.
+
+## Installation
+
+Make sure you have a `python3` in your search path, and that you have
+[mwclient][]==0.10.* installed (`pip install --user mwclient` is fine).
+
+Copy [`mw2beamer.py`](https://raw.githubusercontent.com/ernstki/mw2beamer/master/mw2beamer/mw2beamer.py)
+to some directory in your `$PATH` and make it executable with `chmod a+x`. It
+doesn't need the ".py" extension to function (on Unix/macOS anyway), so feel
+free to remove that.
+
+Try `mw2beamer.py --help`, or `mw2beamer --help` if you removed the `.py` when
+you copied it in place.
 
 ## Usage
 
@@ -74,3 +87,4 @@ Kevin Ernst ([ernstki -at- mail.uc.edu](mailto:ernstki%20-at-%20mail.uc.edu))
 
 [beamer]: https://www.ctan.org/pkg/beamer
 [pandoc]: https://pandoc.org/
+[mwclient]: https://github.com/mwclient/mwclient
