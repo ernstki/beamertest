@@ -1,3 +1,4 @@
+# editor detritus and Finder turds
 .*sw?
 *~
 .DS_Store
@@ -12,3 +13,7 @@
 
 # whatever else
 mermaid-filter.err
+*.pdf
+*.pyc
+venv
+!example.pdf

@@ -5,3 +5,6 @@
 # to an HTML representation on GitHub (just like READMEs are), and I don't
 # actually want that
 *.wiki_ linguist-language=mediawiki
+
+# (hopefully?) stop TeX from inflating the Linguist percentages by language
+*.text -linguist-detectable
