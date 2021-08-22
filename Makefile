@@ -1,12 +1,11 @@
 BASE = slides
-
 SOURCES = $(BASE).md defaults.yml Makefile
 
-pdf: $(BASE).pdf $(SOURCES)
+pdf: $(BASE).pdf
 
-tex: $(BASE).tex $(SOURCES)
+tex: $(BASE).tex
 
-$(BASE).%:
+$(BASE).tex $(BASE).pdf: $(SOURCES)
 	pandoc -s -i -t beamer -d defaults.yml $(BASE).md -o $@
 
 #-V aspectratio=169            - put in defaults.yml instead

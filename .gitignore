@@ -1,3 +1,11 @@
 .*sw?
 *~
 .DS_Store
+
+# TeXShop auxiliary files
+*.aux
+*.log
+*.nav
+*.snm
+*.synctex.gz
+*.toc

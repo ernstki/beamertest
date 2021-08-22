@@ -4,7 +4,7 @@ variables:
   # try 'horizontal' for the full set
   navigation: frame
 
-# default is 2; uncomment this to get subsection titles
-#slide-level: 4
+# makes subsection titles show up; default is "discover" from doc structure
+slide-level: 4
 
 
