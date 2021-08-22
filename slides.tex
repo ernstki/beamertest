@@ -207,8 +207,14 @@ content before the pause
 \subsection{Mermaid diagram}\label{mermaid-diagram}}
 
 \begin{frame}[fragile]{Mermaid diagram}
-Inline, with a \texttt{data:} URI; shows up in the Beamer slides, but
-weirdly sized.
+Using a \texttt{data:} URI
+\href{https://github.com/github/markup/issues/270}{doesn't work} on
+GitHub, so use \texttt{loc=} to generate an external file.
+
+This \emph{does} show up in the Beamer slides, but weirdly
+positioned/sized, no matter what I do.
+
+\includegraphics{img/mermaid.png}
 \end{frame}
 
 \hypertarget{mermaid-diagram-pdf-version}{%
@@ -216,15 +222,26 @@ weirdly sized.
 version)}\label{mermaid-diagram-pdf-version}}
 
 \begin{frame}[fragile]{Mermaid diagram (PDF version)}
-\texttt{.mermaid\ format=svg} hidden from slides in a ``notes'' section,
-but shows up in README.
+Here a \texttt{.mermaid\ format=svg} hidden from slides in a ``notes''
+section, but shows up in the README.
 
 \note{\includegraphics{img/mermaid.svg}}
 
-\centerline{\includegraphics[width=3in]{img/mermaid.pdf}}
+The Makefile generates a PDF version that can is embedded into the next
+slide with LaTeX's \texttt{\textbackslash{}includegraphics}. So
+sometimes you have to \texttt{make} twice.\footnote<.->{https://tex.stackexchange.com/questions/2099/how-to-include-svg-diagrams-in-latex}
+\end{frame}
 
-Hat tip to Jeromy Anglim for the size/alignment tip using
-\texttt{\textbackslash{}includegraphics}\footnote<.->{https://jeromyanglim.blogspot.com/2012/07/beamer-pandoc-markdown.html}
+\hypertarget{mermaid-diagram-pdf-version-contd}{%
+\subsection{Mermaid diagram (PDF version,
+cont'd)}\label{mermaid-diagram-pdf-version-contd}}
+
+\begin{frame}[fragile]{Mermaid diagram (PDF version, cont'd)}
+Here's the \texttt{\textbackslash{}includegraphics} version, using the
+PDF, which shows up in the PDF slides but not the README. Hat tip to
+Jeromy Anglim.\footnote<.->{https://jeromyanglim.blogspot.com/2012/07/beamer-pandoc-markdown.html}
+
+\centerline{\includegraphics[width=3in]{img/mermaid.pdf}}
 \end{frame}
 
 \hypertarget{a-plain-slide-bottom-aligned}{%
@@ -232,7 +249,8 @@ Hat tip to Jeromy Anglim for the size/alignment tip using
 bottom-aligned}\label{a-plain-slide-bottom-aligned}}
 
 \begin{frame}[plain]{A plain slide, bottom-aligned}
-Just a plain old slide.\footnote<.->{Do footnotes work?}
+Just a plain old slide.\footnote<.->{Do footnotes work? (not in GitHub,
+  they don't)}
 \end{frame}
 
 \hypertarget{conclusion}{%
@@ -279,6 +297,9 @@ QED.
 
   \begin{itemize}
   \tightlist
+  \item
+    \href{https://github.com/github/markup/issues/270}{github/markup
+    \#270} - GitHub doesn't support \texttt{data:} URIs in Markdown
   \item
     \href{https://tex.stackexchange.com/a/2107}{How to include SVG
     diagrams in LaTeX?}

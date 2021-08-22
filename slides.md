@@ -60,9 +60,12 @@ content before the pause
 
 ## Mermaid diagram
 
-Inline, with a `data:` URI; shows up in the Beamer slides, but weirdly sized.
+Using a `data:` URI [doesn't work][gh270] on GitHub, so use `loc=` to generate
+an external file.
 
-~~~mermaid
+This _does_ show up in the Beamer slides, but weirdly positioned/sized, no matter what I do.
+
+~~~{.mermaid loc=img filename=mermaid format=png width=400}
 sequenceDiagram
     Alice->>John: Hello John, how are you?
     John-->>Alice: Great!
@@ -70,7 +73,8 @@ sequenceDiagram
 
 ## Mermaid diagram (PDF version)
 
-`.mermaid format=svg` hidden from slides in a "notes" section, but shows up in README.
+Here a `.mermaid format=svg` hidden from slides in a "notes" section, but shows
+up in the README. 
 
 ::: notes
 ~~~{.mermaid loc=img filename=mermaid format=svg}
@@ -80,17 +84,24 @@ sequenceDiagram
 ~~~
 :::
 
-\centerline{\includegraphics[width=3in]{img/mermaid.pdf}}
+The Makefile generates a PDF version that can is embedded into the next slide
+with LaTeX's `\includegraphics`. So sometimes you have to `make` twice.[^0]
 
-<small>Hat tip to Jeromy Anglim for the size/alignment tip using
-`\includegraphics`[^1]</small>
+[^0]: https://tex.stackexchange.com/questions/2099/how-to-include-svg-diagrams-in-latex
+
+## Mermaid diagram (PDF version, cont'd)
+
+Here's the `\includegraphics` version, using the PDF, which shows up in the
+PDF slides but not the README. Hat tip to Jeromy Anglim.[^1]</small>
+
+\centerline{\includegraphics[width=3in]{img/mermaid.pdf}}
 
 [^1]: https://jeromyanglim.blogspot.com/2012/07/beamer-pandoc-markdown.html
 
 ## A plain slide, bottom-aligned {.plain}
 Just a plain old slide.[^2]
 
-[^2]: Do footnotes work?
+[^2]: Do footnotes work? (not in GitHub, they don't)
 
 ## Conclusion
 QED.
@@ -105,7 +116,11 @@ QED.
     * basically, `\framesubtitle{The frame's subtitle}` is the only way
 * [beameruserguide.pdf](http://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf)
 * <https://deic-web.uab.cat/~iblanes/beamer_gallery/>
-* [mermaid-filter](https://github.com/raghur/mermaid-filter)
+* [mermaid-filter][mf]
+    * [github/markup #270][gh270] - GitHub doesn't support `data:` URIs in Markdown
     * [How to include SVG diagrams in LaTeX?](https://tex.stackexchange.com/a/2107)
         * I just ended up using librsvg's `svg2pdf` in the Makefile
 :::
+
+[mf]: https://github.com/raghur/mermaid-filter
+[gh270]: https://github.com/github/markup/issues/270
