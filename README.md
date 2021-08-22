@@ -1,8 +1,10 @@
 # mw2beamer
 
-Convert an arbitrary article on your MediaWiki wiki to [Beamer] slides. Prompts
-for credentials for a local site protected with HTTP Basic authentication (but
-does not cache these anywhere).
+Convert an arbitrary article on your MediaWiki wiki to [Beamer][] slides using
+[Pandoc][] (Pandoc, which is awesome by the way).
+
+Prompts for credentials for a local site protected with HTTP Basic
+authentication (but does not cache these anywhere).
 
 See [`beamertest`](beamertest) for some experiments with Markdown, Pandoc, and
 Beamer.
@@ -69,3 +71,6 @@ Kevin Ernst ((ernstki -at- mail.uc.edu)[mailto:ernstki%20-at-%20mail.uc.edu])
 ## License
 
 [MIT](LICENSE).
+
+[beamer]: https://www.ctan.org/pkg/beamer
+[pandoc]: https://pandoc.org/
