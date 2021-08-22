@@ -71,9 +71,9 @@ but shows up in the README.
 
 </div>
 
-The Makefile generates a PDF version that can is embedded into the next
-slide with LaTeX’s `\includegraphics`. So sometimes you have to `make`
-twice.\[1\]
+The Makefile generates a PDF version that can be embedded\[1\] into the
+next slide with LaTeX’s `\includegraphics`. So sometimes you have to
+`make` twice.
 
 ## Mermaid diagram (PDF version, cont’d)
 

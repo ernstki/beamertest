@@ -84,8 +84,8 @@ sequenceDiagram
 ~~~
 :::
 
-The Makefile generates a PDF version that can is embedded into the next slide
-with LaTeX's `\includegraphics`. So sometimes you have to `make` twice.[^0]
+The Makefile generates a PDF version that can be embedded[^0] into the next
+slide with LaTeX's `\includegraphics`. So sometimes you have to `make` twice.
 
 [^0]: https://tex.stackexchange.com/questions/2099/how-to-include-svg-diagrams-in-latex
 
