@@ -68,8 +68,7 @@ if __name__ == '__main__':
     parser.add_argument('-q', '--quiet', '--silent', action='store_true',
             help='silence all non-error output')
     parser.add_argument('-u', '--user', default=DEFAULT_USER,
-            help="the username to authenticate as (default: {})"
-                 .format(DEFAULT_USER))
+            help='the username to authenticate as (default: $USER)')
     parser.add_argument('-s', '--site', default=DEFAULT_SITE,
             help='the hostname to connect to (default: $MW2BEAMER_SITE, '
                  "else {})".format(DEFAULT_SITE))

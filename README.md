@@ -26,7 +26,7 @@ optional arguments:
   -v, --verbose         print detailed progress (try '-vv')
   -q, --quiet, --silent
                         silence all non-error output
-  -u USER, --user USER  the username to authenticate as (default: ern6xv)
+  -u USER, --user USER  the username to authenticate as (default: $USER)
   -s SITE, --site SITE  the hostname to connect to (default: $MW2BEAMER_SITE,
                         else tfwiki.cchmc.org)
   -a AUTHOR, --author AUTHOR
