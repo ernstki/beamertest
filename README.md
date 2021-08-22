@@ -1,7 +1,8 @@
 # mw2beamer
 
 Convert an arbitrary article on your MediaWiki wiki to [Beamer][] slides using
-[Pandoc][] (Pandoc, which is awesome by the way).
+[Pandoc][] (Pandoc, which is awesome by the way). In short, [this][wikitext]
+becomes [this][pdf].
 
 Prompts for credentials for a local site protected with HTTP Basic
 authentication, but does not cache or save these anywhere.
@@ -87,4 +88,6 @@ Kevin Ernst ([ernstki -at- mail.uc.edu](mailto:ernstki%20-at-%20mail.uc.edu))
 
 [beamer]: https://www.ctan.org/pkg/beamer
 [pandoc]: https://pandoc.org/
+[wikitext]: mw2beamer/example.wiki_
+[pdf]: https://raw.githubusercontent.com/ernstki/mw2beamer/master/mw2beamer/example.pdf
 [mwclient]: https://github.com/mwclient/mwclient
