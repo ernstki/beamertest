@@ -1,0 +1,22 @@
+== First slide ==
+Presentation info (maybe with author and date?)
+
+* don't put anything in the lead, it throws off Pandoc's section detection)
+* <code>&lt;h1&gt;</code>s don't seem to work quite right either
+** although maybe <code>--slide-level</code> would fix that?
+
+== Second slide ==
+Some content in the first section
+
+=== A subsection ===
+Subsection content.
+
+* bullet
+* points
+
+== Links ==
+* [https://github.com/ernstki/mw2beamer ernstki/mw2beamer] on GitHub
+** [https://github.com/ernstki/mw2beamer/tree/master/beamertest Markdown+Pandoc+Beamer example slides]
+
+=== See also ===
+* [https://github.com/mwclient/mwclient mwclient/client] on GitHub

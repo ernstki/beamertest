@@ -1,0 +1,3 @@
+# see https://github.com/github/linguist/blob/master/docs/overrides.md
+# and https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+*.txt linguist-language=mediawiki
