@@ -7,4 +7,4 @@
 *.wiki_ linguist-language=mediawiki
 
 # (hopefully?) stop TeX from inflating the Linguist percentages by language
-*.text -linguist-detectable
+*.tex -linguist-detectable
