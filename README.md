@@ -12,13 +12,18 @@ Beamer. You might find the [`Makefile`](beamertest/Makefile) useful.
 
 ## Installation
 
-Make sure you have a `python3` in your search path, and that you have
-[mwclient][]==0.10.* installed (`pip install --user mwclient` is fine).
+Make sure you have:
 
-Copy [`mw2beamer.py`](https://raw.githubusercontent.com/ernstki/mw2beamer/master/mw2beamer/mw2beamer.py)
-to some directory in your `$PATH` and make it executable with `chmod a+x`. It
-doesn't need the ".py" extension to function (on Unix/macOS anyway), so feel
-free to remove that.
+* a `python3` in your search path
+* [mwclient][]==0.10.*; `pip install --user mwclient` is fine
+
+Put it in your `$PATH`:
+
+* Copy [`mw2beamer.py`](https://raw.githubusercontent.com/ernstki/mw2beamer/master/mw2beamer/mw2beamer.py)
+to some directory in your default search path, _e.g._, `~/bin`
+* make it executable with `chmod a+x`
+    * you don't need the ".py" extension (on Unix/macOS anyway), so feel free
+      to remove that
 
 Try `mw2beamer.py --help`, or `mw2beamer --help` if you removed the `.py` when
 you copied it in place.
