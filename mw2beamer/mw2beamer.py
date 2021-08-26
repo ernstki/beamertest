@@ -32,8 +32,7 @@ VERBOSE_LOG_FMT = '[%(levelname)s] %(asctime)s - %(message)s'
 def get_site(site: str, user: str, passwd: str) -> mwclient.Site:
     import mwclient
     # FIXME: not everybody uses this auth method
-    s = mwclient.Site(site, httpauth=(user, passwd)
-    )
+    s = mwclient.Site(site, httpauth=(user, passwd))
     return s
 
 
